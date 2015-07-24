@@ -71,7 +71,7 @@ let g:syntastic_check_on_wq = 0
 
 "Configure tagbar
 nmap <F8> :TagbarToggle<CR>
-autocmd vimenter * TagbarOpen
+autocmd vimenter,BufRead,BufNewFile * TagbarOpen
 
 "Configure vim-airline
 let g:airline#extensions#tabline#enabled = 1
