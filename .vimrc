@@ -78,7 +78,7 @@ let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 
 "Configure vim-gitgutter
-autocmd vimenter * GitGutterEnable
+autocmd vimenter,BufRead,BufNewFile * GitGutterEnable
 
 "Configure vim-javascript
 let g:javascript_enable_domhtmlcss = 1
