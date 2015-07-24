@@ -39,7 +39,9 @@ set ruler
 set title
 set ttyfast
 
+"Set tab options
 set ts=4 sts=4 sw=4 expandtab
+autocmd BufWritePost * retab
 
 "Set color scheme
 if $COLORTERM == 'gnome-terminal'
