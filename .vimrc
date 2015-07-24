@@ -32,6 +32,8 @@ set cursorline
 set encoding=utf-8
 set hlsearch
 set incsearch
+set listchars=trail:·
+set list
 set nobackup
 set noswapfile
 set number
