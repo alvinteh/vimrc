@@ -43,7 +43,10 @@ set ttyfast
 
 "Set tab options
 set ts=4 sts=4 sw=4 expandtab
-autocmd BufWritePost * retab
+autocmd BufWritePre * retab
+
+"Strip trailing spaces on save
+autocmd BufWritePre * :%s/\s\+$//e
 
 "Set color scheme
 if $COLORTERM == 'gnome-terminal'
