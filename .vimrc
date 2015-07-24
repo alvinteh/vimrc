@@ -59,7 +59,7 @@ endif
 
 "Configure NERDTree
 let NERDTreeHighlightCursorline=1
-autocmd vimenter * NERDTree
+autocmd vimenter,BufRead,BufNewFile * NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
