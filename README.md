@@ -4,7 +4,7 @@ vimrc configuration for development.
 
 ## Usage
 
-1. Copy the `.vimrc` file to `~/.vim/`.
+1. Copy the `.vimrc` file to `~/`.
 2. Install Vundle by running:
   `git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 3. Install the vim plugins by running:
