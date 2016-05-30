@@ -92,6 +92,10 @@ set expandtab
 set softtabstop=4
 set shiftwidth=4
 set tabstop=4
+" Override spacing for specific file types
+autocmd Filetype html setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype javascript setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype ruby setlocal ts=2 sw=2 sts=2 expandtab
 " Retab before writing files
 autocmd BufWritePre * retab
 " Strip trailing spaces on save
