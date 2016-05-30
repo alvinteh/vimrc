@@ -18,5 +18,5 @@ vimrc configuration for development.
 
 ## License
 
-Copyright 2015 Alvin Teh.
+Copyright 2016 Alvin Teh.
 Licensed under the MIT license.
