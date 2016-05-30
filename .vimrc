@@ -20,7 +20,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-fugitive'
-call vundle#end() 
+call vundle#end()
 
 syntax on
 filetype on
@@ -30,20 +30,36 @@ filetype indent on
 set backspace=indent,eol,start
 set cursorline
 set encoding=utf-8
-set hlsearch
-set incsearch
+set lazyredraw
 set listchars=trail:·
 set list
 set nobackup
 set noswapfile
 set number
 set ruler
+set scrolloff=3
+set showmatch
 set title
 set ttyfast
+set wildmenu
+
+"Set search options
+set hlsearch
+set incsearch
+
+"Set code folding options
+set foldenable
+set foldlevelstart=6
+set foldmethod=indent
+nnoremap <space> za
 
 "Set tab options
 set ts=4 sts=4 sw=4 expandtab
 autocmd BufWritePre * retab
+
+"Set jk to move vertically by visual line
+nnoremap j gj
+nnoremap k gk
 
 "Strip trailing spaces on save
 autocmd BufWritePre * :%s/\s\+$//e
@@ -52,9 +68,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
-"Keep solarized configuration as a backup
-"set background=dark
-"colorscheme solarized
 colorscheme molokai
 
 "Enable mouse support
@@ -64,9 +77,24 @@ endif
 
 "Configure NERDTree
 let NERDTreeHighlightCursorline=1
+"Launch NERDTree on launch
 autocmd vimenter,BufRead,BufNewFile * NERDTree
+"Focus on the file buffer on launch
+autocmd vimenter * wincmd p
 autocmd StdinReadPre * let s:std_in=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+"Close all buffers if the only buffer left is NERDTree
+autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
+function! s:CloseIfOnlyNerdTreeLeft()
+  if exists("t:NERDTreeBufName")
+    if bufwinnr(t:NERDTreeBufName) != -1
+      if winnr("$") == 1
+        q
+      endif
+    endif
+  endif
+endfunction
 
 "Configure Syntastic
 let g:syntastic_always_populate_loc_list = 1
