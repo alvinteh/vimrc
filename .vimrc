@@ -113,6 +113,10 @@ function! XTermPasteBegin()
   set paste
   return ""
 endfunction
+" Delete into black hole register
+nnoremap d "_d
+vnoremap d "_d
+vnoremap p "_dP
 
 
 "----------------------------------------
