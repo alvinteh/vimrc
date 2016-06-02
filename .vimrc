@@ -140,7 +140,7 @@ endif
 "----------------------------------------
 let NERDTreeHighlightCursorline=1
 " Launch NERDTree on launch
-autocmd vimenter,BufRead,BufNewFile * NERDTree
+autocmd vimenter * NERDTree
 " Focus on the file buffer on launch
 autocmd vimenter * wincmd p
 autocmd StdinReadPre * let s:std_in=1
