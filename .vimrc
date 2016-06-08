@@ -139,6 +139,7 @@ endif
 " Configure NERDTree
 "----------------------------------------
 let NERDTreeHighlightCursorline=1
+let NERDTreeShowHidden=1
 " Launch NERDTree on launch
 autocmd vimenter * NERDTree
 " Focus on the file buffer on launch
