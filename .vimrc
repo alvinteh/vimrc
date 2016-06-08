@@ -201,6 +201,7 @@ autocmd vimenter,BufRead,BufNewFile * GitGutterEnable
 " Configure vim-indent-guides
 "----------------------------------------
 autocmd vimenter * IndentGuidesToggle
+let g:indent_guides_exclude_filetypes = ['nerdtree']
 
 
 "----------------------------------------
