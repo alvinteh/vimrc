@@ -23,6 +23,7 @@ Plugin 'elzr/vim-json'
 Plugin 'fatih/vim-go'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
@@ -192,6 +193,12 @@ set laststatus=2
 " Configure vim-gitgutter
 "----------------------------------------
 autocmd vimenter,BufRead,BufNewFile * GitGutterEnable
+
+
+"----------------------------------------
+" Configure vim-indent-guides
+"----------------------------------------
+autocmd vimenter * IndentGuidesToggle
 
 
 "----------------------------------------
