@@ -24,6 +24,7 @@ Plugin 'elzr/vim-json'
 Plugin 'fatih/vim-go'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'mxw/vim-jsx'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdcommenter'
@@ -206,3 +207,9 @@ autocmd vimenter * IndentGuidesToggle
 " Configure vim-javascript
 "----------------------------------------
 let g:javascript_enable_domhtmlcss = 1
+
+
+"----------------------------------------
+" Configure vim-jsx
+"----------------------------------------
+let g:jsx_ext_required = 0
