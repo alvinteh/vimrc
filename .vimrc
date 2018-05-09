@@ -145,6 +145,8 @@ endif
 "----------------------------------------
 let NERDTreeHighlightCursorline=1
 let NERDTreeShowHidden=1
+" Ignore vendor and .git folders
+let g:NERDTreeIgnore=['\~$', '.git', 'node_modules', 'vendor']
 " Launch NERDTree on launch
 autocmd vimenter * NERDTree
 " Focus on the file buffer on launch
